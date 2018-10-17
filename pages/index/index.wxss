@@ -1,0 +1,39 @@
+/*  
+* 
+*/
+
+/*
+* page是对整个页面将进行的设置
+*/
+Page{
+  background-color: #FFE4E1;
+}
+form{
+  margin-top:50rpx;
+}
+label{
+  display: flex;
+  justify-content: space-between;
+  margin:50rpx 0 50rpx 0;
+  padding-left: 30rpx;  
+  margin-right:45rpx;
+}
+input{
+  width: 300rpx;
+  text-align:right;
+}
+#siderBar{
+  width: 600rpx;
+  margin-left: 40rpx;
+}
+slider{
+  margin-top:55rpx;
+}
+button{
+  width:70%;
+  margin-top: 105rpx;
+}
+#manyi{
+  display: flex;
+  justify-content: space-between;
+}

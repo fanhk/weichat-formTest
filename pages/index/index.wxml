@@ -1,0 +1,54 @@
+<!--表单提交和测试小程序 -->
+<view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <label>姓名:<input placeholder="请输入您的姓名"/></label>
+    <label>学号:<input type="number" placeholder="请输入您的学号"/></label>
+    <label>学院：
+      <picker mode="selector" value="{{index}}" range="{{department}}" bindchange="indexChange">
+        <view class="picker">
+          {{department[index]}}
+        </view>
+      </picker>
+    </label>
+    <label>专业：
+      <picker mode="selector" value="{{index2}}" range="{{major}}" bindchange="index2Change">
+        <view class="picker">
+          {{major[index2]}}
+        </view>
+      </picker>
+    </label>
+    <label>班级：
+      <picker mode="selector" value="{{index3}}" range="{{class}}" bindchange="index3Change">
+        <view class="picker">
+          {{class[index3]}}
+        </view>
+      </picker>
+    </label>
+    <label>是否报名试点班：
+      <view class="body-view">
+        <switch checked="{{switchSta}}" bindchange="switch1Change"/>
+      </view>
+    </label>
+    <label>
+      <view class="section section_gap" style="width:100%">
+      <view id="manyi">
+        <text class="section__title">专业满意度：</text>
+        <text>{{satisify}}%</text>
+      </view>
+        <view class="body-view" id="siderBar">
+          <slider bindchanging="slider3change" backgroundColor="yellow"/>
+        </view>
+      </view>
+    </label>
+    <button form-type="submit">点击提交</button>
+  </form>
+</view>
+<toast hidden="{{hidden2}}">
+  发送成功
+</toast>
+<loading hidden="{{hidden1}}">
+  正在请求，请稍后。。。
+</loading>
+<loading hidden="{{hidden3}}">
+  发送失败，可能是服务器异常
+</loading>
